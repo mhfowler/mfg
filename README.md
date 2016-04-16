@@ -4,6 +4,12 @@ With this template I can quickly deploy a new webapp to the amazon cloud which l
 
 I find this very useful for getting small applications up and running quickly. It is also useful for starting a new project to know from the onset that 'deployment' is already taken care of so I can focus on the actual project.
 
+In the past without Ansible I would sometimes end up creating monolithic apps which share infrastructure  to perform multiple functions &mdash; I used to do this  because "solving deployment again" was an intimidating task and so I would tack more functionality onto existing infrastructure to save time. 
+Because this template allows me to quickly start projects with deployment already taken care of, it encourages me to make new projects completely independent with their own github repository and deployment server, leading to fully independent micro services that are more robust.
+
+In a sense this template is like my own Heroku, but in addition to the convenience of quickly bringing up new machines I can extend and customize it, as well as save money by bringing up AWS micro instances for free. 
+
+
 
 ## Steps To Deploy
 
