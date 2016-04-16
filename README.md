@@ -13,11 +13,11 @@ This file contains the parameters which control Ansible.
 
 **app_name**: unimportant, but is used for naming of some files (probably should just keep it as hello_webapp)
 
-**repo_url**: change this to the url of your github repository
+**repo_url**: change this to the url of your github repository (e.g. git@github.com:mhfowler/alembic_flask_ansible_ec2_template.git)
 
-**repo_remote**: which git remote server will use 
+**repo_remote**: which git remote server will use (e.g. origin)
 
-**repo_branch**: which git branch server will use 
+**repo_branch**: which git branch server will use (e.g. master)
 
 **src_dir**: the path to where the webapp will be stored on server (probably shouldn't change)
 
@@ -27,13 +27,13 @@ This file contains the parameters which control Ansible.
 
 **aws_security_group**: the security group which the spawned server will belong to (security group must already exist)
 
-**aws_instance_name**: the tag which the spawned server will be given &mdash; this is important for identifying your new server in the AWS console
+**aws_instance_name**: the tag which the spawned server will be given &mdash; this is important for identifying your new server in the AWS console (e.g. aws_default)
 
 **aws_key_location**: the path on your local computer to the SSH private key associated with aws_key_name listed above &mdash; this file must already exist on your computer
 
 **aws_subnet**: the aws subnet which the spawned server will belong to (this subnet must already exist in your amazon)
 
-**prod_url**: this attribute is not used. I included it because when I add cron jobs via ansible I often make use of this
+**prod_url**: this attribute is not used. I included it because when I add cron jobs via ansible I often make use of this (e.g. http://test.com/)
 
 
 ### 2. Create devops/secret_files/secret.json
