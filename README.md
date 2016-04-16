@@ -45,9 +45,7 @@ My secret.json looks something like this:
 ```
 SLACKBOT_TOKEN is for authenticating with slack (see hello_utilities/slack_helper.py https://api.slack.com/)
 SLACK_CHANNEL_ID is the slack channel id which slack_helper logs to by default.
-
 AWS_ACCESS_KEY_ID and AWS_SECRET_ACESS_KEY are your AWS authentication credentials.
-
 TEST_DB_CONNECTION is a string for authenticating with the database. See get_db_url() in _hello_settings.py for how to configure this to be different for different environments.
 
 
