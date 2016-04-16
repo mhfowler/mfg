@@ -11,7 +11,7 @@ def slack_notify_message(message, channel_id=None):
     :param message:
     :return: None
     """
-    bot_token = SECRETS_DICT['CITIGROUP_SLACKBOT_TOKEN']
+    bot_token = SECRETS_DICT['SLACKBOT_TOKEN']
     sc = SlackClient(bot_token)
 
     if not channel_id:
@@ -27,7 +27,7 @@ def list_channels():
     helper method for listing all channels
     :return: None
     """
-    bot_token = SECRETS_DICT['CITIGROUP_SLACKBOT_TOKEN']
+    bot_token = SECRETS_DICT['SLACKBOT_TOKEN']
     sc = SlackClient(bot_token)
     channels = sc.api_call('channels.list')
     return channels
