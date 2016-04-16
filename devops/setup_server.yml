@@ -57,9 +57,6 @@
     - name: write nginx.conf
       action: template src=templates/nginx.conf dest=/etc/nginx/nginx.conf
 
-    - name: create webapps directory
-      action: file dest={{webapps_dir}} state=directory
-
     - name: create webgroup if it doesn't exist
       group: name=webgroup state=present
       tags:
