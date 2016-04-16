@@ -99,16 +99,16 @@ Visit /error/ this test page will force a 500 error which should log a message t
 Visit /test_db/ everytime you refresh this page a new random value should appear (as a new value is logged to the database)
 
 
+## Deploying New Code
+
+Whenever you want to deploy new code, push your repository to origin master, and then run deploy.sh &mdash; this will deploy your new code to the server as well as do some configuration steps which often need to happen more than once (e.g. copy secret.json, install python requirements etc.)
+
 
 ## Troubleshooting 
 
 The first step of spawn_server.sh is to spawn a new server. If that succeeds, then there will be a new line in devops/hosts (you can also confirm this machine's existence in the AWS EC2 console).
 
-The second step is to run setup_server.sh &mdash; these Ansible tasks need to only be run once.
-
-Then in the future, whenever you want to deploy new code, push your repository to origin master, and then run deploy.sh &mdash; this will deploy your new code to the server as well as do some configuration steps which often need to happen more than once (e.g. copy secret.json, install python requirements etc.)
-
-To troubleshot spawn_server.sh confirm that a new machine has been created, and then you can try individually running setup_server.sh and deploy.sh to isolate problems.
+To troubleshot spawn_server.sh confirm that a new machine has been created, and then you can try individually running setup_server.sh and deploy.sh to isolate problems (all three of these steps are attempted when you run spawn_server.sh).
 
 
 
