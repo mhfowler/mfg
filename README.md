@@ -108,7 +108,7 @@ Whenever you want to deploy new code, push your repository to origin master, and
 
 The first step of spawn_server.sh is to spawn a new server. If that succeeds, then there will be a new line in devops/hosts (you can also confirm this machine's existence in the AWS EC2 console).
 
-To troubleshot spawn_server.sh confirm that a new machine has been created, and then you can try individually running setup_server.sh and deploy.sh to isolate problems (all three of these steps are attempted when you run spawn_server.sh).
+To troubleshot spawn_server.sh confirm that a new machine has been created, and then you can try individually running setup_server.sh and deploy.sh to isolate problems (these steps are also attempted when you run spawn_server.sh).
 
 
 
