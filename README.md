@@ -102,7 +102,7 @@ Visit /test_db/ everytime you refresh this page a new random value should appear
 
 ## Troubleshooting 
 
-The first step of spawn_server.sh is to spawn a new server. If that succeeds, then there will be a nice a line in devops/hosts (you can also confirm this machine's existence in the AWS EC2 console).
+The first step of spawn_server.sh is to spawn a new server. If that succeeds, then there will be a new line in devops/hosts (you can also confirm this machine's existence in the AWS EC2 console).
 
 The second step is to run setup_server.sh &mdash; these Ansible tasks need to only be run once.
 
