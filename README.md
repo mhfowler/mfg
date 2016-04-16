@@ -101,7 +101,14 @@ Visit /test_db/ everytime you refresh this page a new random value should appear
 
 ## Deploying New Code
 
-Whenever you want to deploy new code, push your repository to origin master, and then run deploy.sh &mdash; this will deploy your new code to the server as well as do some configuration steps which often need to happen more than once (e.g. copy secret.json, install python requirements etc.)
+Whenever you want to deploy new code:
+```
+git push origin master
+./deploy.sh; 
+```
+deploy.sh will deploy your new code to the server as well as do some configuration steps which often need to happen again after changes (e.g. copy secret.json, install python requirements etc.)
+
+Conventionally setup_server.sh contains configurations tasks which only need to be run once (for the server intialization) and spawn_server.sh is only run when you want to bring up a new machine.
 
 
 ## Troubleshooting 
