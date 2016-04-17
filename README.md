@@ -1,4 +1,4 @@
-# Flask Alembic Ansible Nginx EC2 Template
+# Ansible Flask Template
 
 With this template I can quickly deploy a new webapp to the amazon cloud which logs error messages to slack, has database connectivity, and is configured by Ansible (allowing for idempotent server configuration &mdash; no need to remember server state). 
 
