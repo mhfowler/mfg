@@ -2,6 +2,7 @@
 
 ## setup
 pip install -r requirements.txt
+
 create a secret.json modelled after secret.json.sample with actual secrets 
 
 
