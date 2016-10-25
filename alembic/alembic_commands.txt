@@ -1,5 +1,0 @@
-# autogenerate migration
-alembic revision --autogenerate -m "initial tables"
-
-# run migration
-alembic upgrade head

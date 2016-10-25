@@ -4,13 +4,12 @@ import traceback
 import re, json
 
 from flask import Flask, render_template, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify, request
 
-from hello_settings import PROJECT_PATH, get_db_url, DEBUG
+from hello_settings import PROJECT_PATH, DEBUG
 from hello_utilities.log_helper import _log
+from receipt_printers.printer1 import printer1
 from hello_webapp.helper_routes import get_hello_helpers_blueprint
-from hello_models.database import db_session
 
 
 # paths
@@ -24,19 +23,22 @@ app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=PROJECT_PATH)
 app.debug = DEBUG
 
 
-# integrate sql alchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = get_db_url()
-db = SQLAlchemy(app)
-
-
 # register blueprints
-hello_helpers = get_hello_helpers_blueprint(db=db, template_dir=TEMPLATE_DIR)
+hello_helpers = get_hello_helpers_blueprint(template_dir=TEMPLATE_DIR)
 app.register_blueprint(hello_helpers)
 
 
 @app.route("/")
 def hello_page():
     return render_template("hello.html")
+
+
+@app.route("/prog1/", methods=['POST'])
+def prog1_page():
+    question_text = request.form.get('questionText')
+    _log('question text: {}'.format(question_text))
+    printer1(question_text)
+    return render_template("ty.html")
 
 
 @app.route('/static/<path:path>')
@@ -58,11 +60,6 @@ def error_handler_500(e):
     _log('@channel: 500 error: {}'.format(e.message))
     _log(formatted_lines)
     raise e
-
-
-@app.teardown_appcontext
-def shutdown_session(exception=None):
-    db_session.remove()
 
 
 if __name__ == "__main__":

@@ -1,11 +1,9 @@
-from flask import render_template
 from flask import Blueprint
 
 from hello_utilities.log_helper import _log
-from hello_webapp.test import get_test_objects, create_test_object
 
 
-def get_hello_helpers_blueprint(db, template_dir):
+def get_hello_helpers_blueprint(template_dir):
 
     # blueprint for these routes
     hello_helpers = Blueprint('hello_helpers', __name__, template_folder=template_dir)
@@ -24,16 +22,6 @@ def get_hello_helpers_blueprint(db, template_dir):
         """
         _log('@channel: slack is working?')
         return 'slack test'
-
-    @hello_helpers.route('/test_db/')
-    def test_db_page():
-        """
-        this helper page confirms that the database is connected and working
-        :return:
-        """
-        create_test_object(db)
-        test_objects = get_test_objects(db)
-        return render_template("hello_db.html", test_objects=test_objects)
 
     # finally return blueprint
     return hello_helpers
