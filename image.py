@@ -49,7 +49,6 @@ def resize_image(img, target_size):
     # Scale as needed
     x_scale = target_size.x/size.x
     y_scale = target_size.y/size.y
-    print('resize:', x_scale, y_scale)
     scale_factor = max(x_scale, y_scale)
     scaled_size = Point(*[int(d*scale_factor) for d in size])
     img = img.resize(scaled_size)
