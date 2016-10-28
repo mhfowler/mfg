@@ -1,0 +1,240 @@
+
+<HTML>
+<HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<META NAME="description" CONTENT="The Magic 8 Ball has all the answers to life's questions.">
+<META NAME="keywords" CONTENT="Magic Eight Ball, Magic 8 Ball,online 8 ball, 8 ball">
+
+<meta property="og:title" content="Ask the Magic Eight Ball"/>
+
+<meta property="og:type" content="website"/>
+
+<meta property="og:image" content="http://8ball.tridelphia.net/images/8square.png"/>
+
+<meta property="og:url" content="http://8ball.tridelphia.net"/>
+
+<meta property="og:site_name" content="Ask the Magic Eight Ball"/>
+
+<meta property="fb:admins" content="546914139"/>
+
+<!--meta property="fb:app_id" content="233983739967211"/-->
+
+
+<link rel="canonical" href="https://eightball.tridelphia.net" />
+<TITLE>Ask the Magic Eight Ball</TITLE>
+
+<STYLE TYPE="text/css">
+.subtitle {font-family: arial, monospaced; font-size: 20pt; font-weight:bold; }
+.maindiv { max-width:740px; margin:auto;}
+.maintable {}
+.disclaimer {}
+
+.adlink { width: 320px; height: 100px; }
+@media (min-width:500px) { .adlink { width: 468px; height: 60px; } }
+@media (min-width:800px) { .adlink { width: 728px; height: 90px; } }
+
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+
+// Copyright (c) 2002 Bobby Williams
+
+    //create and initialize the array of answer images
+var answers= new Array(20);
+for (i = 0; i < answers.length; i++)
+    answers[i] = new Image();
+
+    //set the image sources equal to various gif files corresponding to the answers
+    //these answers generally corrospond to the answers found in Tyco's original 8 ball
+answers[0].src  = 'images/AsISeeItYes.gif';
+answers[1].src  = 'images/AskAgainLater.gif';
+answers[2].src  = 'images/BetterNotTellYouNow.gif';
+answers[3].src  = 'images/CannotPredictNow.gif';
+answers[4].src  = 'images/ConcentrateAndAskAgain.gif';
+answers[5].src  = 'images/DontCountOnIt.gif';
+answers[6].src  = 'images/ItIsCertain.gif';
+answers[7].src  = 'images/ItIsDecidedlySo.gif';
+answers[8].src  = 'images/MostLikely.gif';
+answers[9].src  = 'images/MyReplyIsNo.gif';
+answers[10].src = 'images/MySourcesSayNo.gif';
+answers[11].src = 'images/OutlookGood.gif';
+answers[12].src = 'images/OutlookNotSoGood.gif';
+answers[13].src = 'images/ReplyHazyTryAgain.gif';
+answers[14].src = 'images/SignsPointToYes.gif';
+answers[15].src = 'images/VeryDoubtful.gif';
+answers[16].src = 'images/WithoutADoubt.gif';
+answers[17].src = 'images/Yes.gif';
+answers[18].src = 'images/YesDefinitely.gif';
+answers[19].src = 'images/YouMayRelyOnIt.gif';
+
+    //create and assign various images for special purposes
+var hmm = new Image();
+hmm.src = "images/m8hmmmm.gif";
+var didntask = new Image();
+didntask.src = "images/m8youdidntask.gif";
+var formquestion = new Image();
+formquestion.src = "images/m8formofaquestion.gif";
+var justasked = new Image();
+justasked.src = "images/m8youjustasked.gif";
+
+    //various other global variables
+
+    //'wait' is used to check if there is a question currently being answered
+var wait = false;
+
+var lastQuestion = "";  //'lastQuestion' is used to store the previous question
+            //so it can't be asked twice in a row
+
+var index;  //'index' is used to specify an answer in the image array
+
+function askQuestion()
+{
+    if (wait) //dont respond to question if another is being answered
+        return false;
+
+    wait = true; //block other questions till further notice
+
+        //first ensure that question is of non-zero length
+    if (document.QForm.Question.value.length == 0)
+    {
+            // show "you didn't ask me anything" message for five seconds
+        document.images.Magic8.src = didntask.src;
+        window.setTimeout("refresh8Ball()", 5000);
+    }
+
+        //next ensure that question ends with question mark
+    else if (document.QForm.Question.value.indexOf('?') < 1)
+    {
+            //show "address me with a question" message for five seconds
+        document.images.Magic8.src = formquestion.src;
+        window.setTimeout("refresh8Ball()", 5000);
+    }
+
+        //make sure the user didn't just ask the same question
+    else if(document.QForm.Question.value == lastQuestion)
+    {
+            //show "You just asked me that" message for five seconds
+        document.images.Magic8.src = justasked.src;
+        window.setTimeout("refresh8Ball()", 5000);
+
+            //clear the question box, as punishment
+        window.setTimeout("document.QForm.Question.value = ''", 5000);
+    }
+
+        //otherwise, its a good question, so answer it
+    else
+    {
+            //show the 8 ball thinking
+    //  document.images.Magic8.src = hmm.src;
+document.images.Magic8.src ="images/m8hmmmm.gif?q=" + document.QForm.Question.value
+            //pick a random answer index
+        index = Math.floor(Math.random() * (answers.length));
+
+            //remember question so it wont be repeated next time
+        lastQuestion = document.QForm.Question.value;
+
+        if (index == 4 || index == 13)  // prevent user from asking same question twice in a row
+            lastQuestion = "";  // except when this answer tells user to ask again
+
+            //in two seconds show the answer
+        window.setTimeout("document.images.Magic8.src = (answers[index]).src", 2000);
+
+            //in nine seconds, remove the answer
+        window.setTimeout("refresh8Ball()", 9000);
+
+    }
+    return false; //returning false here prevents the form from being submitted
+}
+
+function refresh8Ball()
+{
+        //lifts blocking on additional questions
+    wait = false;
+        //restores the 8 ball image to its initial state
+    document.images.Magic8.src = 'images/magic8ball.gif';
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV class="maindiv" align="center">
+<TABLE class="maintable" BORDER="0">
+<TR><TD WIDTH="" VALIGN="Top" ALIGN="center">
+<H1 CLASS="subtitle">
+Ask the Magic 8-Ball</H1>
+<P>
+<FORM NAME="QForm" action="/prog1/" method="post">
+    <INPUT NAME="questionText" TYPE="Text" STYLE="font-size:large;width:80%;">&nbsp;&nbsp;
+    <INPUT NAME="Ask" TYPE="submit" VALUE="submit" STYLE="font-size:large;">
+</FORM>
+<P>
+<IMG NAME="Magic8" SRC="/static/img/magic8ball.gif">
+<P>
+<!--The Magic Eight Ball has all the answers.--><P>
+<table><tr>
+<td valign="top" style="padding-top:13px">
+</td>
+<td valign="top">
+<div class="adlink">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- linus -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1266148779782625"
+     data-ad-slot="9680412742"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</td>
+
+</tr></table>
+<P class="disclaimer" STYLE="text-align:justify; padding-left:10px; padding-right:10px;">
+
+This web page simulates the famous &quot;Magic Eight Ball&quot; toy, a registered trademark of Mattel Inc.
+The &quot;Magic Eight Ball&quot; trademark and various 8-Ball answers are used without permission of Mattel Inc.
+Mattel Inc. is in no way affiliated with this web page, or with its proprieter, or with the <a href="http://twitter.com/8BallTweets/with_replies">8 ball Twitter bot</a> with which we are also associated. The purported
+magical powers of the Online Magic Eight Ball are in no way meant to imply or insinuate that this program is in fact a
+supernatural oracle, and the author and publisher of this program will not be liable for poor lifestyle
+choices or snap decisions based on the advice of this amazing software. This oracle is not to be used while
+operating heavy machinery, especially while under the influence of alcohol, and/or sedatives. This software
+is not intended for use in the design, construction, operation or maintenance of any nuclear facility
+or air traffic control installation, and the author and publisher hereby disclaim any
+express or implied warranties of fitness for such purpose. Use of this oracle is strictly forbidden to
+fans of the New York Yankees. Void where prohibited, taxed, or misconstrued. No children or animals were
+harmed in the making of this Magic 8 Ball. Any more questions? Contact <a href="form2.php">The Owner</a>.
+<P>
+</TD></TR><TR><TD>
+<!--?php  include("include/links3.php")  -?-->
+<div style="text-align:center; padding-top:20px;">
+<table style="float:right;"><tr><td>
+<!--script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<fb:like href="http://8ball.tridelphia.net" layout="box_count" font="arial"></fb:like>
+</td><td style="padding-left:50px;">
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone></g:plusone>
+</td><td>
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-hashtags="magic8ball">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+--></td></tr></table>
+</div>
+</TD></TR>
+<tr><td>
+<!--?php include("include/twitter.php"); ?-->
+<p style="clear:both;">
+&nbsp;</p>
+<!--?php include("include/links2.php"); ?-->
+
+</td></tr>
+</TABLE>
+</DIV>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6444841-1");
+pageTracker._trackPageview();
+</script>
+</BODY>
+</HTML>

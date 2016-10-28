@@ -33,11 +33,21 @@ def hello_page():
     return render_template("hello.html")
 
 
+@app.route("/mfg_web_portal/")
+def mfg_page():
+    return render_template("mfg.html")
+
+
+@app.route("/8ball/")
+def eight_page():
+    return render_template("8ball.html")
+
+
 @app.route("/prog1/", methods=['POST'])
 def prog1_page():
     question_text = request.form.get('questionText')
     _log('question text: {}'.format(question_text))
-    printer1(question_text)
+    # printer1(question_text)
     return render_template("ty.html")
 
 
