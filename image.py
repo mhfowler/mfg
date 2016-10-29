@@ -1,6 +1,7 @@
 import io
 import random
-from uuid import uuid4
+from slugify import slugify
+from datetime import datetime
 from PIL import Image, ImageEnhance, ImageDraw, ImageFont
 from urllib import request
 from collections import namedtuple
@@ -9,17 +10,22 @@ FONT = '/home/ftseng/.fonts/terminal-grotesque.ttf'
 
 def chunks(l, n):
     """Yield successive n-sized chunks from l."""
+    if not l:
+        return []
     _chunks = []
     for i in range(0, len(l), n):
         _chunks.append(l[i:i + n])
     return _chunks
 
-def gen_image(urls, text='', mixture_size=(400,250)):
+def gen_image(urls, question, text, mixture_size=(400,250)):
     assert len(urls) >= 3
     random.shuffle(urls)
     mimg = blend_images(urls, target_size=mixture_size)
     mimg = draw_text(text, mimg)
-    fname = '{}.jpg'.format(uuid4())
+    fname = '{}_{}.jpg'.format(
+        slugify(question, separator='_'),
+        datetime.now().timestamp()
+    )
     mimg.save(fname, 'jpeg', quality=0)
     return fname
 
@@ -119,7 +125,7 @@ def blend_images(urls, target_size=(400, 250)):
     for img in images:
         img = resize_image(img, target_size)
         bright = ImageEnhance.Brightness(img)
-        img = bright.enhance(0.8)
+        img = bright.enhance(1.2)
         cimages.append(img)
 
     the_img = Image.blend(cimages[0], cimages[1], 0.5)

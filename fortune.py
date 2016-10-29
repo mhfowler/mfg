@@ -21,4 +21,7 @@ def tell_fortune(question):
     if text is None:
         text = get_answer(' '.join(terms))
 
-    return gen_image(img_urls, text=text)
+    return gen_image(img_urls, question, text)
+
+
+print(tell_fortune("Is it a good idea to travel across the ocean?"))
