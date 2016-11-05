@@ -1,5 +1,12 @@
 # MFG
 
+
+0. with python3 pip install -r freeze_requirements.txt
+1. python -m spacy.en.download
+
+
+
+
 ## setup
 pip install -r requirements.txt
 

@@ -8,3 +8,4 @@ Werkzeug==0.8.3
 wsgiref==0.1.2
 slackclient==0.18.0
 Google-Search-API==1.1.11
+spacy==1.1.2

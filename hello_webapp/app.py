@@ -1,16 +1,13 @@
 import os
 import sys
 import traceback
-import re, json
 
 from flask import Flask, render_template, send_from_directory
-from flask import jsonify, request
+from flask import request
 
 from hello_settings import PROJECT_PATH, DEBUG
 from hello_utilities.log_helper import _log
-from receipt_printers.printer1 import printer1
 from hello_webapp.helper_routes import get_hello_helpers_blueprint
-
 
 # paths
 FLASK_DIR = os.path.join(PROJECT_PATH, 'hello_webapp')

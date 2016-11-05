@@ -1,0 +1,69 @@
+1478370330607	geckodriver	INFO	Listening on 127.0.0.1:61091
+1478370331595	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.M5usMHkgDu4s
+1478370331596	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370331611	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61100
+1478370332310	Marionette	INFO	Listening on port 61100
+1478370333726	Marionette	INFO	startBrowser d64cc358-5df8-044f-91a4-6e9956cf9e8a
+[Child 48654] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48654] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370337575	geckodriver	INFO	Listening on 127.0.0.1:61188
+1478370338564	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.JAkMbYnA6phw
+1478370338565	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370338567	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61198
+1478370339087	Marionette	INFO	Listening on port 61198
+1478370340108	Marionette	INFO	startBrowser dd494b68-a781-0841-95dc-3b995383787a
+[Child 48659] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48659] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370342636	geckodriver	INFO	Listening on 127.0.0.1:61276
+1478370343638	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.xCBSRYbNcSOb
+1478370343639	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370343641	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61285
+1478370344093	Marionette	INFO	Listening on port 61285
+1478370345076	Marionette	INFO	startBrowser 1035b01f-856a-9e46-84b0-8768bb895374
+[Child 48662] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48662] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370350401	geckodriver	INFO	Listening on 127.0.0.1:61367
+1478370351407	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.7nCvJAxTTFNh
+1478370351408	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370351411	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61376
+1478370351886	Marionette	INFO	Listening on port 61376
+1478370352879	Marionette	INFO	startBrowser f5adcfae-f503-8f48-bcfc-ad6a154d5aa9
+JavaScript error: https://answers.yahoo.com/, line 1349: TypeError: Y.YA is undefined
+JavaScript error: https://answers.search.yahoo.com/search?fr=uh3_answers_vert_gs&type=2button&p=what%20is%20banana%3F, line 3: TypeError: Y.Search.UniversalHeader is undefined
+JavaScript error: https://s.yimg.com/aj/lh-0.9.js, line 1: SyntaxError: startMark not found
+[Child 48665] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48665] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370504282	geckodriver	INFO	Listening on 127.0.0.1:61622
+1478370505270	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.xVAKICKQgZIt
+1478370505271	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370505273	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61631
+1478370505921	Marionette	INFO	Listening on port 61631
+1478370506974	Marionette	INFO	startBrowser cae1049b-d36b-8143-9654-4ae28f461d6a
+[Child 48753] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48753] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370509028	geckodriver	INFO	Listening on 127.0.0.1:61713
+1478370510027	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.HX1IQnZd5PJX
+1478370510028	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370510030	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61723
+1478370510478	Marionette	INFO	Listening on port 61723
+1478370511457	Marionette	INFO	startBrowser 04ffc9b1-597d-4543-b7f4-1bbb9565407a
+[Child 48757] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48757] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370514701	geckodriver	INFO	Listening on 127.0.0.1:61798
+1478370515700	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.0Y2Vohi6Qi0b
+1478370515701	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370515704	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61807
+1478370516205	Marionette	INFO	Listening on port 61807
+1478370517160	Marionette	INFO	startBrowser eaea3a52-8117-6c45-8440-11696399f677
+[Child 48760] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48760] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+1478370519015	geckodriver	INFO	Listening on 127.0.0.1:61883
+1478370520019	mozprofile::profile	INFO	Using profile path /var/folders/77/0p4s7yld5r71vn8nbjcpd22c0000gn/T/rust_mozprofile.b5qGSiueL1cc
+1478370520020	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1478370520022	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61892
+1478370520464	Marionette	INFO	Listening on port 61892
+1478370521424	Marionette	INFO	startBrowser 9549787a-6194-1842-a7a5-5a879a1c831b
+JavaScript error: https://answers.yahoo.com/, line 1349: TypeError: Y.YA is undefined
+JavaScript error: https://s.yimg.com/aj/lh-0.9.js, line 1: SyntaxError: startMark not found
+[Child 48763] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052
+[Child 48763] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2052

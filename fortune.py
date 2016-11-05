@@ -26,4 +26,5 @@ def tell_fortune(question):
 
 if __name__ == '__main__':
     import sys
-    tell_fortune(sys.argv[1])
+    tell_fortune("what is banana?")
+    # tell_fortune(sys.argv[1])

@@ -6,7 +6,7 @@ from PIL import Image, ImageEnhance, ImageDraw, ImageFont
 from urllib import request
 from collections import namedtuple
 
-FONT = '/home/ftseng/.fonts/terminal-grotesque.ttf'
+FONT = 'terminal-grotesque.ttf'
 
 def chunks(l, n):
     """Yield successive n-sized chunks from l."""
