@@ -13,7 +13,7 @@ def tell_fortune(question):
     terms = [t.text for t in doc if t.pos in [VERB, NOUN, ADJ]]
     terms = random.sample(terms, min(3, len(terms)))
     while len(terms) < 3:
-        terms.append(random.sample(terms))
+        terms.append(random.sample(terms, 1))
 
     img_urls = [random.choice(search(t)) for t in terms]
 
@@ -24,4 +24,6 @@ def tell_fortune(question):
     return gen_image(img_urls, question, text)
 
 
-print(tell_fortune("Is it a good idea to travel across the ocean?"))
+if __name__ == '__main__':
+    import sys
+    tell_fortune(sys.argv[1])
